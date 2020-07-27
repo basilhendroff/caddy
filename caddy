@@ -25,11 +25,11 @@ load_rc_config $name
 
 # Defaults
 : ${caddy_enable:=NO}
-: ${caddy_config:=%%ETCDIR%%/%%CADDY_CONFIG%%}
+: ${caddy_config:=/usr/local/etc/caddy/Caddyfile}
 : ${caddy_adapter:=caddyfile}
 : ${caddy_extra_flags:=""}
 
-command="%%PREFIX%%/bin/${name}"
+command="/usr/local/bin/${name}"
 caddy_flags="--config ${caddy_config} --adapter ${caddy_adapter}"
 pidfile=/var/run/${name}.pid
 
