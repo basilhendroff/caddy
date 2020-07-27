@@ -31,13 +31,13 @@ load_rc_config $name
 
 command="/usr/local/bin/${name}"
 caddy_flags="--config ${caddy_config} --adapter ${caddy_adapter}"
-pidfile=/var/run/${name}.pid
+pidfile="/var/run/${name}.pid"
 
 required_files="${caddy_config} ${command}"
 
 # Extra Commands
 extra_commands="validate reload"
-start_cmd="${command} start ${caddy_flags} ${caddy_extra_flags} --pidfile /var/run/${name}.pid"
+start_cmd="${command} start ${caddy_flags} ${caddy_extra_flags} --pidfile ${pidfile}"
 validate_cmd="${command} validate ${caddy_flags}"
 reload_cmd="${command} reload ${caddy_flags}"
 stop_cmd="${command} stop"
