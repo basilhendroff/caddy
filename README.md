@@ -1,2 +1,2 @@
 # caddy
-The etc/rc.d initialisation file I first built.
+Incarnations of the etc/rc.d initialisation file.
