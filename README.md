@@ -1,2 +1,2 @@
 # caddy
-The etc/rc.d initialisation file. Suggestions for improvements and bug fixes.
+The etc/rc.d initialisation file I first built.
